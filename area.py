@@ -2,7 +2,7 @@ import pygame
 import random
 
 
-class Area:
+class Area(object):
     def draw_grid(w, rows, surface):  # draw the visible grid
         size_between = w // rows
 
@@ -21,11 +21,10 @@ class Area:
         while True:
             x = random.randrange(rows)
             y = random.randrange(rows)
-            if len(list(filter(lambda z: z.pos == (x, y), positions))) > 0: # take every value of grid, filter out
+            if len(list(filter(lambda z: z.pos == (x, y), positions))) > 0:  # take every value of grid, filter out
                 # snake's coordinates
                 continue
             else:
                 break
 
-        return x, y # pass the coordinates
-
+        return x, y  # pass the coordinates
