@@ -1,9 +1,11 @@
 import pygame
 import random
+from IPython.display import Image
 
 
 class Area(object):
     def draw_grid(w, rows, surface):  # draw the visible grid
+        Image('background.jpeg')
         size_between = w // rows
 
         x = 0
@@ -12,7 +14,7 @@ class Area(object):
             x = x + size_between
             y = y + size_between
 
-            pygame.draw.line(surface, (180, 133, 63), (x, 0), (x, w))
+            pygame.draw.line(surface, (255, 133, 63), (x, 0), (x, w))
             pygame.draw.line(surface, (180, 133, 63), (0, y), (w, y))
 
     def random_snack(rows, item):  # calculate where the snack needs to spawn
@@ -28,3 +30,4 @@ class Area(object):
                 break
 
         return x, y  # pass the coordinates
+

@@ -1,14 +1,14 @@
-import cube
+import cube2
 import speechrecognition
 
 
-class Ai:
-    body = []
-    turns = {}
+class Ai2:
+    body = []  # list with amount of body parts
+    turns = {}  # dictionary with te turn state of each body part
 
     def __init__(self, color, pos):  # constructor
         self.color = color
-        self.head = cube.Cube(pos)
+        self.head = cube2.Cube2(pos)
         self.body.append(self.head)
         self.direction = None
         self.direction_x = 0
@@ -16,13 +16,12 @@ class Ai:
         self.timer = 0
         self.src = speechrecognition.SpeechRecognition()
 
-    def ai_move(self, snack_x, snack_y):  # move the ai snake
+    def ai2_move(self, snack_x, snack_y):  # move the ai snake
         if self.src.speech() == "hard":  # hard mode
             self.timer = self.timer + 1.5
-            print("hard mode on")
         else:  # normal mode
             self.timer = self.timer + 1
-        if self.timer >= 10:
+        if self.timer >= 7:
             if snack_x < self.body[0].pos[0]:  # if the snake position is to the left of the ai snake's head
                 self.direction_x = -1
                 self.direction_y = 0
@@ -45,7 +44,7 @@ class Ai:
                 p = c.pos[:]  # all cube objects have a position
                 if p in self.turns:  # check if position is in turn list
                     turn = self.turns[p]
-                    c.move(turn[0], turn[1])  # give the cube the direction
+                    c.move2(turn[0], turn[1])  # give the cube the direction
                     if i == len(self.body) - 1:  # if the last cube of the snake is in the turn, remove the turn
                         self.turns.pop(p)
 
@@ -59,12 +58,12 @@ class Ai:
                     elif c.direction_y == -1 and c.pos[1] <= 0:  # from down to up
                         c.pos = (c.pos[0], c.rows - 1)
                     else:
-                        c.move(c.direction_x, c.direction_y)
+                        c.move2(c.direction_x, c.direction_y)
             self.timer = 0
 
-    def draw(self, surface):  # draw red snake
+    def draw2(self, surface):  # draw blue snake
         for i, c in enumerate(self.body):
             if i == 0:
-                c.draw(surface, True)  # true basically says draw the eyes
+                c.draw2(surface, True)  # true basically says draw the eyes
             else:
-                c.draw(surface)
+                c.draw2(surface)
