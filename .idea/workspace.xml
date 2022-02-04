@@ -1,29 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5a41a092-cdfc-4bcd-844b-95b376a7e538" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ai1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cube1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cube2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cube_S.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/final-project-team-27/SpeechRecognition.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/final-project-team-27/ai2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speechrecognition.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/final-project-team-27.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/final-project-team-27.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final project repository.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ai.py" beforeDir="false" afterPath="$PROJECT_DIR$/ai.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai1.py" beforeDir="false" afterPath="$PROJECT_DIR$/ai1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai2.py" beforeDir="false" afterPath="$PROJECT_DIR$/ai2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/area.py" beforeDir="false" afterPath="$PROJECT_DIR$/area.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cube.py" beforeDir="false" afterPath="$PROJECT_DIR$/cube.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final-project-team-27/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/final-project-team-27/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final-project-team-27/Final project repository.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/final-project-team-27/Final project repository.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final-project-team-27/ai.py" beforeDir="false" afterPath="$PROJECT_DIR$/final-project-team-27/ai.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final-project-team-27/cube.py" beforeDir="false" afterPath="$PROJECT_DIR$/final-project-team-27/cube.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final-project-team-27/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/final-project-team-27/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final-project-team-27/snake.py" beforeDir="false" afterPath="$PROJECT_DIR$/final-project-team-27/snake.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snake.py" beforeDir="false" afterPath="$PROJECT_DIR$/snake.py" afterDir="false" />
     </list>
@@ -50,6 +39,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="24DOqxqg0DaxaeNAVTfSFcDjJGp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -72,6 +64,9 @@
       <module name="final-project-team-27" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -93,9 +88,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\GamePC\.virtualenvs\GamePC-qmU8NT5m\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
@@ -156,6 +151,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

@@ -8,23 +8,23 @@ The code consists of a main class with an update and main function, and an area 
 and their respective cube classes(draws cubes and remembers their directions).
 """""""""
 import snake
-import cube_S
+import cube
 import area
 import pygame
 import ai
-import ai1
-import ai2
+# import ai1
+# import ai2
 import random
 
 
 def update(surface):  # update all values every loop
     global rows, width, s, snack
-    surface.fill((205, 133, 63))
+    surface.fill((50, 50, 50))
     s.draw_S(surface)  # update player snake position
     a.draw(surface)  # update red snake position
-    a1.draw1(surface)  # update purple snake position
-    a2.draw2(surface)  # update blue snake position
-    snack.draw_S(surface)
+    a1.draw(surface)  # update purple snake position
+    a2.draw(surface)  # update blue snake position
+    snack.draw(surface)
     area.Area.draw_grid(width, rows, surface)
     pygame.display.update()
 
@@ -35,10 +35,10 @@ def main():
     rows = 30
     win = pygame.display.set_mode((width, 750))  # window
     s = snake.Snake((0, 255, 0), (10, 10))  # initialize player snake
-    a = ai.Ai((80, 0, 255), (random.randrange(rows), random.randrange(rows)))  # initialize red snake
-    a1 = ai1.Ai1((50, 20, 150), (random.randrange(rows), random.randrange(rows)))  # initialize purple snake
-    a2 = ai2.Ai2((50, 0, 110), (random.randrange(rows), random.randrange(rows)))  # initialize blue snake
-    snack = cube_S.Cube_S(area.Area.random_snack(rows, s), color=(255, 0, 0))  # first snack
+    a = ai.Ai((0, 0, 255), (random.randrange(rows), random.randrange(rows)))  # initialize red snake
+    a1 = ai.Ai((50, 200, 150), (random.randrange(rows), random.randrange(rows)))  # initialize purple snake
+    a2 = ai.Ai((91, 52, 110), (random.randrange(rows), random.randrange(rows)))  # initialize blue snake
+    snack = cube.Cube(area.Area.random_snack(rows, s), color=(255, 0, 0))  # first snack
     pygame.display.set_caption('SNAKE')
 
     while True:
@@ -50,15 +50,16 @@ def main():
 
         if s.body[0].pos == snack.pos:  # if player snake is at the snack's position
             s.add_cube_S()
-            snack = cube_S.Cube_S(area.Area.random_snack(rows, s), color=(255, 0, 0))  # spawning snacks
+            snack = cube.Cube(area.Area.random_snack(rows, s), color=(255, 0, 0))  # spawning snacks
         elif a1.body[0].pos == snack.pos:  # increase size of purple snake
-            a1.add_cube1()  # increase size ai snake
-            snack = cube_S.Cube_S(area.Area.random_snack(rows, s), color=(255, 0, 0))  # spawning snacks
+            a1.add_cube()  # increase size ai snake
+            snack = cube.Cube(area.Area.random_snack(rows, s), color=(255, 0, 0))  # spawning snacks
 
         for x in range(len(s.body)):  # losing condition (When player snake touches an ai snake)
-            if s.body[x].pos in list(map(lambda z: z.pos, s.body[x + 1:])) or s.body[x].pos in list(
-                    map(lambda z: z.pos, a.body[x:])) or s.body[x].pos in list(map(lambda z: z.pos, a1.body[x:])) or \
-                    s.body[x].pos in list(map(lambda z: z.pos, a2.body[x:])):
+            if         s.body[x].pos in list(map(lambda z: z.pos, s.body[x + 1:])) \
+                    or s.body[x].pos in list(map(lambda z: z.pos, a.body[x:])) \
+                    or s.body[x].pos in list(map(lambda z: z.pos, a1.body[x:])) \
+                    or s.body[x].pos in list(map(lambda z: z.pos, a2.body[x:])):
                 print('Game over')
                 print('Time survived: ', s.in_game_time)
                 print('Score: ', s.score)

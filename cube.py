@@ -5,7 +5,7 @@ class Cube(object):
     rows = 30
     w = 750
 
-    def __init__(self, start, color=(80, 0, 255)):
+    def __init__(self, start, color):
         self.pos = start
         self.direction_x = 0
         self.direction_y = 0
@@ -20,7 +20,6 @@ class Cube(object):
         dis = self.w // self.rows
         head_x = self.pos[0]
         head_y = self.pos[1]
-        self.color = (230, 40, 60)  # red
         pygame.draw.rect(surface, self.color, (head_x * dis + 1, head_y * dis + 1, dis - 2, dis - 2))
 
         if eyes:  # draw eyes on the head

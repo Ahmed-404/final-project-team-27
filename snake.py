@@ -15,13 +15,13 @@ class Snake(object):
         self.direction_x = 0
         self.direction_y = 1
         self.src = speechrecognition.SpeechRecognition()
-        self.timer = 40
+        self.cimer = 40
         self.iter_val = 10
         self.score = 0
         self.in_game_time = 0
 
     def move(self):  # move the snake and change its speed
-        self.timer = self.timer + self.iter_val
+        self.cimer = self.cimer + self.iter_val
         self.in_game_time = self.in_game_time + 1
         if self.src.speech() == "fast":  # increase speed snake
             self.iter_val = self. iter_val + 10
@@ -32,8 +32,8 @@ class Snake(object):
         if self.src.speech() == "quit":  # close the game
             pygame.quit()
 
-        if self.timer >= 30:  # speed limit on player snake
-            self.timer = 0
+        if self.cimer >= 30:  # speed limit on player snake
+            self.cimer = 0
             for event in pygame.event.get():
                 keys = pygame.key.get_pressed()
                 for key in keys:

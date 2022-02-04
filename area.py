@@ -1,11 +1,10 @@
 import pygame
 import random
-from IPython.display import Image
+
 
 
 class Area(object):
-    def draw_grid(w, rows, surface):  # draw the visible grid
-        Image('background.jpeg')
+    def draw_grid(w, rows, surface):  # draw the visrible grid
         size_between = w // rows
 
         x = 0
